@@ -1,6 +1,4 @@
 # -*- coding: ISO-8859-1 -*-
-import json, random, os, time
-
 from twisted.web import http
 from twisted.internet import protocol, reactor
 
@@ -154,7 +152,7 @@ class EchoFactory(protocol.ClientFactory):
 		reactor.stop()
 		
 if __name__ == '__main__':
-	import sys
+	import sys, os
 	os.system('title Client with proxy')
 	log.startLogging(sys.stderr)
 	factory = EchoFactory()
